@@ -4,7 +4,6 @@ from fastapi.middleware import cors
 from fastapi.params import Body
 from pydantic import BaseModel
 from random import randrange
-import mysql.connector
 import time
 from pydantic_settings import BaseSettings
 from sqlalchemy.orm import Session
