@@ -4,7 +4,6 @@ from fastapi import FastAPI, Response, status, HTTPException, Depends, APIRouter
 from sqlalchemy.orm import Session
 from ..database import engine, get_db
 from random import randrange
-import mysql.connector
 
 router = APIRouter(
     prefix="/posts"

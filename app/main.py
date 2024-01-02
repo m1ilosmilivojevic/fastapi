@@ -8,8 +8,8 @@ import time
 from pydantic_settings import BaseSettings
 from sqlalchemy.orm import Session
 from app import models, schema, utils, oauth2
-from .database import engine, get_db
-from .config import settings
+from app.database import engine, get_db
+from app.config import settings
 ##models.Base.metadata.create_all(bind=engine)
 from app.routers import auth, post, user, vote
 
