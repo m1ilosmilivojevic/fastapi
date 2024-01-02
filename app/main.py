@@ -1,6 +1,6 @@
 from typing import Optional
 from fastapi import FastAPI, Response, status, HTTPException, Depends
-from fastapi.middleware import cors
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.params import Body
 from pydantic import BaseModel
 from random import randrange
@@ -22,7 +22,7 @@ origins = ["*"]
 
 app = FastAPI()
 app.add_middleware(
-    cors,
+    CORSMiddleware,
     allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
